@@ -9,14 +9,11 @@
     "lint": "eslint src --max-warning=0",
     "test": "jest",
     "test:watch": "yarn test --watch",
+    "test:ci": "jest --runInBand",
     "generate": "yarn plop --propfile generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "build-storybook": "build-storybook -s ./public",
+    "postinstall": "husky install"
   },
   "lint-staged": {
     "src/**/*": [
