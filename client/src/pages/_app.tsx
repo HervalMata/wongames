@@ -18,5 +18,6 @@ function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </>
   )
-
 }
+
+export default App
